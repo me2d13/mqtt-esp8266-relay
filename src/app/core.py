@@ -3,7 +3,7 @@ import app.secrets as secrets
 from network import WLAN
 from umqtt.robust import MQTTClient
 import ujson
-from machine import Pin
+import machine
 from app.ota_updater import OTAUpdater
 
 print('Memory free', gc.mem_free())
@@ -12,7 +12,7 @@ print('Memory free', gc.mem_free())
 def main():
     connect_wifi()
     version = check_for_updates()
-    context = { 'pin': Pin(secrets.PIN_R, Pin.OUT), 'version': version }
+    context = { 'pin': machine.Pin(secrets.PIN_R, machine.Pin.OUT), 'version': version }
     client = init_mqtt(context)
     while True:
         client.wait_msg()

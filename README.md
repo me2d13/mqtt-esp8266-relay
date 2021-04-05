@@ -15,5 +15,6 @@ Some code snippets I use during development
     rshell
     connect serial COM7
     rsync src /pyboard
+    repl
 
     mosquitto_pub -t "/devices/relay/door/set" -m '{"push":500}'
