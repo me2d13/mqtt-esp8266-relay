@@ -1,0 +1,10 @@
+WIFI_SSID = 'ssid'
+WIFI_PASSWORD = 'password'
+MQTT_HOST = '192.168.1.1'
+MQTT_PORT = 1883
+MQTT_CLIENT = 'relay'
+STATE_TOPIC = '/devices/relay'
+COMMAND_TOPIC = '/devices/relayset'
+LOG_TOPIC = '/devices/relay/log'
+GITHUB_URL = 'https://github.com/me2d13/mqtt-esp8266-relay'
+PIN_R = 5  # Wemos D1
